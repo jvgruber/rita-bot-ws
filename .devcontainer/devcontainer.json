@@ -1,0 +1,33 @@
+{
+  "name": "humble desktop-full",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--privileged",
+    "--network=host"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
+    "source=/home/julian/Desktop,target=/desktop,type=bind"
+  ],
+  // "features": {
+  //   "ghcr.io/devcontainers/features/desktop-lite": {}
+  // },
+  // "forwardPorts": [6080, 5901],
+  // "portsAttributes": {
+  //   "6080": {
+  //     "label": "Desktop (Web)",
+  //     "onAutoForward": "notify"
+  //   },
+  //   "5901":{
+  //     "label": "Desktop (VNC)",
+  //     "onAutoForward": "notify"
+  //   }
+  // },
+  "env": {
+    "ROS_DOMAIN_ID": "42",
+    "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp"
+  }
+
+}
