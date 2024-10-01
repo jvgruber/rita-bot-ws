@@ -11,6 +11,10 @@
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
     "source=/home/julian/Desktop,target=/desktop,type=bind"
   ],
+  "postStartCommand": "export ROS_DOMAIN_ID=42"
+
+  // RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
   // "features": {
   //   "ghcr.io/devcontainers/features/desktop-lite": {}
   // },
@@ -24,10 +28,5 @@
   //     "label": "Desktop (VNC)",
   //     "onAutoForward": "notify"
   //   }
-  // },
-  "env": {
-    "ROS_DOMAIN_ID": "42",
-    "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp"
-  }
-
+  // }
 }

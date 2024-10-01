@@ -24,10 +24,10 @@ RUN sudo usermod --append --groups video $USERNAME
 # Update all packages
 RUN sudo apt update && sudo apt upgrade -y
 
-# Install Git
-RUN sudo apt install -y \
+# Install Git (and other packages)
+RUN sudo apt-get install -y \
 git \
-terminator
+python3-colcon-common-extensions
 
 # Rosdep update
 RUN rosdep update
