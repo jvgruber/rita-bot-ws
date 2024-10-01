@@ -1,0 +1,3 @@
+[submodule "src/my_package"]
+	path = src/my_package
+	url = git@github.com:jvgruber/my_package.git
