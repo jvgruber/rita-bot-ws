@@ -27,7 +27,9 @@ RUN sudo apt update && sudo apt upgrade -y
 # Install Git (and other packages)
 RUN sudo apt-get install -y \
 git \
-python3-colcon-common-extensions
+python3-colcon-common-extensions \
+ros-humble-xacro \
+ros-humble-joint-state-publisher-gui
 
 # Rosdep update
 RUN rosdep update
