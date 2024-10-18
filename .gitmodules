@@ -1,3 +1,6 @@
 [submodule "src/my_package"]
 	path = src/my_package
 	url = git@github.com:jvgruber/my_package.git
+[submodule "src/rita_robot"]
+	path = src/rita_robot
+	url = git@github.com:jvgruber/rita_robot.git
