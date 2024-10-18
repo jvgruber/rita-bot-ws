@@ -28,8 +28,9 @@ RUN sudo apt update && sudo apt upgrade -y
 RUN sudo apt-get install -y \
 git \
 python3-colcon-common-extensions \
-ros-humble-xacro \
-ros-humble-joint-state-publisher-gui
+ros-humble-gazebo-ros-pkgs \
+ros-humble-joint-state-publisher-gui \
+ros-humble-xacro
 
 # Rosdep update
 RUN rosdep update
