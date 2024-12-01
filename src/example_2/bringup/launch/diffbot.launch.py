@@ -76,6 +76,7 @@ def generate_launch_description():
         parameters=[robot_controllers],
         output="both",
         remappings=[
+            ("~/robot_description", "/robot_description"),
             ("/diffbot_base_controller/cmd_vel", "/cmd_vel"),
         ],
     )
@@ -97,13 +98,13 @@ def generate_launch_description():
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_state_broadcaster"],
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
     )
 
     robot_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["diffbot_base_controller", "--param-file", robot_controllers],
+        arguments=["diffbot_base_controller", "--controller-manager", "/controller_manager"],
     )
 
     # Delay rviz start after `joint_state_broadcaster`
