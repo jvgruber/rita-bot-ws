@@ -28,8 +28,12 @@ RUN sudo apt update && sudo apt upgrade -y
 RUN sudo apt-get install -y \
 git \
 python3-colcon-common-extensions \
+ros-humble-gazebo-ros2-control \
 ros-humble-gazebo-ros-pkgs \
 ros-humble-joint-state-publisher-gui \
+ros-humble-ros2-control \
+ros-humble-ros2-controllers \
+ros-humble-v4l2-camera \
 ros-humble-xacro
 
 # Rosdep update
